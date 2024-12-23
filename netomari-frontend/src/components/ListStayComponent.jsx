@@ -1,6 +1,17 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import { listStays } from '../services/StayService'
 
 const ListStayComponent = () => {
+
+    const [stays, setStays] = useState([])
+
+    useEffect(() => {
+        listStays().then((response) => {
+            setStays(response.data);
+        }).catch(error => {
+            console.error(error);
+        })
+    })
 
     const dummyData = [
         {
@@ -20,7 +31,7 @@ const ListStayComponent = () => {
                 </thead>
                 <tbody>
                     {
-                        dummyData.map(stay =>
+                        stays.map(stay =>
                             <tr key={stay.id}>
                                 <td>{stay.id}</td>
                                 <td>{stay.name}</td>
