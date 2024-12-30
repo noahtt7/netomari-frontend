@@ -4,12 +4,15 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ListStayComponent from './components/ListStayComponent'
+import { HeaderComponent } from './components/HeaderComponent'
+import { FooterComponent } from './components/FooterComponent'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <HeaderComponent/>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -20,17 +23,7 @@ function App() {
       </div>
       <h1 className="text-center">Netomari.</h1>
       <ListStayComponent/>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <FooterComponent/>
     </>
   )
 }
