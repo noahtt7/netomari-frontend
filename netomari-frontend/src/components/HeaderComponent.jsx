@@ -4,7 +4,7 @@ export const HeaderComponent = () => {
   return (
     <div>
         <header>
-            <nav bg="primary"className='navbar navbar-dark bg-dark'>
+            <nav className='navbar'>
                 <a className="navbar-brand">Netomari</a>
             </nav>
         </header>
