@@ -13,12 +13,6 @@ const ListStayComponent = () => {
         })
     })
 
-    const dummyData = [
-        {
-            "id": 1,
-            "name": "Test"
-        }
-    ]
     return (
         <div className='container'>
             <h2>List of Stays</h2>
