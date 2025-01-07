@@ -21,6 +21,7 @@ const ListStayComponent = () => {
                     <tr>
                         <th>Stay ID</th>
                         <th>Stay Name</th>
+                        <th>image</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -29,6 +30,7 @@ const ListStayComponent = () => {
                             <tr key={stay.id}>
                                 <td>{stay.id}</td>
                                 <td>{stay.name}</td>
+                                <td><img src="/images/3.png" alt="Logo"/></td>
                             </tr>
                         )
                     }
