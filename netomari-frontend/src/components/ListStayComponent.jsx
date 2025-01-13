@@ -4,6 +4,11 @@ import { listStays } from '../services/StayService'
 const ListStayComponent = () => {
 
     const [stays, setStays] = useState([])
+    const imgMap = {
+        1: "/images/3.png",
+        2: "/images/117512902_p0_master1200.jpg",
+        3: "images/91228ecbefc2e229ec8ae1116226059a.png"
+    }
 
     useEffect(() => {
         listStays().then((response) => {
@@ -30,7 +35,9 @@ const ListStayComponent = () => {
                             <tr key={stay.id}>
                                 <td>{stay.id}</td>
                                 <td>{stay.name}</td>
-                                <td><img src="/images/3.png" alt="Logo"/></td>
+                                <td>
+                                    <img src={ imgMap[stay.id] } alt="Logo" style={{width: '100px'}}/>
+                                </td>
                             </tr>
                         )
                     }
